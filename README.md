@@ -8,6 +8,7 @@
 3. [Description](#description)
 4. [Installation](#installation)
 5. [Image](#image) 
+6. [Technology](#technology)
 6. [Questions](#questions)
 
 # User Story
@@ -45,6 +46,11 @@
 # Installation
 
 # Image
+
+# Technology
+* https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+* https://choosealicense.com/licenses/
+* https://www.npmjs.com/package/inquirer
 
 # Questions
 If you have any questions or concerns, feel free to contact me 

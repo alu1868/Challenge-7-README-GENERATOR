@@ -47,7 +47,7 @@ const questions = [
     // instructions to use
     {
         type: "input",
-        name: "instructions",
+        name: "usage",
         message: "Please provide instructions for how to use your project (optional)"
     },
 
@@ -63,7 +63,7 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Please select the license for your project",
-        choices: ["none", "MIT", "GPL 2.0", "GPL 3.0", "Apache 2.0", "BSD 2.0", "ISC", "LGPL 3.0", "Mozilla 2.0"]
+        choices: ["Unlicense", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "BootSoftware License 1.0"]
     },
 
     // contributors
