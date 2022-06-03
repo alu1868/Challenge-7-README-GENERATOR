@@ -1,0 +1,22 @@
+{
+  "name": "challenge-7-readme-generator",
+  "version": "1.0.0",
+  "description": "README document generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alu1868/Challenge-7-README-GENERATOR.git"
+  },
+  "author": "Alexander Lu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu1868/Challenge-7-README-GENERATOR/issues"
+  },
+  "homepage": "https://github.com/alu1868/Challenge-7-README-GENERATOR#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
