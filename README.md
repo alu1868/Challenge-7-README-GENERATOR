@@ -7,7 +7,7 @@
 2. [Acceptance Criteria](#acceptance-criteria)
 3. [Description](#description)
 4. [Installation](#installation)
-5. [Image](#image) 
+5. [Demo](#demo) 
 6. [Technology](#technology)
 6. [Questions](#questions)
 
@@ -42,10 +42,13 @@
     THEN I am taken to the corresponding section of the README
 
 # Description
+    Application that generates a basic README with document including: [DESCRIPTION, TABLE OF CONTENTS, INSTALLATION, USAGE, LICENSE, CONTRIBUTING, TESTS, QUESTIONS]
 
 # Installation
+    Ensure you are in the right directory for your terminal. Then run an npm install to install dependencies. Use "node index.js" in the terminal to start the program. Answer the questions and a README.md should be generated with your information
 
-# Image
+# Demo
+* https://drive.google.com/file/d/11Kk_TPMK-S8lP-CRgD-Djcfh7icjlebV/view?usp=sharing
 
 # Technology
 * https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba

@@ -27,34 +27,43 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === "Unlicense") {
-    selectLicense = `https://choosealicense.com/licenses/unlicense/`
+    return "https://choosealicense.com/licenses/unlicense/"
   } else if (license === "GNU AGPLv3") {
-    selectLicense = `https://choosealicense.com/licenses/agpl-3.0/`
+    return "https://choosealicense.com/licenses/agpl-3.0/"
   } else if (license === "GNU GPLv3") {
-    selectLicense = `https://choosealicense.com/licenses/gpl-3.0/`
+    return "https://choosealicense.com/licenses/gpl-3.0/"
   } else if (license === "GNU LGPLv3") {
-    selectLicense = `https://choosealicense.com/licenses/lgpl-3.0/`
+    return "https://choosealicense.com/licenses/lgpl-3.0/"
   } else if (license === "Mozilla Public License 2.0") {
-    selectLicense = `https://choosealicense.com/licenses/mpl-2.0/`
+    return "https://choosealicense.com/licenses/mpl-2.0/"
   } else if (license === "Apache License 2.0") {
-    selectLicense = `https://choosealicense.com/licenses/apache-2.0/`
+    return "https://choosealicense.com/licenses/apache-2.0/"
   } else if (license === "MIT License") {
-    selectLicense = `https://choosealicense.com/licenses/mit/`
+    return "https://choosealicense.com/licenses/mit/"
   } else if (license === "BoostSoftware License 1.0") {
-    selectLicense = `https://choosealicense.com/licenses/bsl-1.0/`
+    return "https://choosealicense.com/licenses/bsl-1.0/"
   } else {
-    selectLicense = "";
+    return "";
   }
-  return selectLicense
+  
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === "") {
+    return ""
+  } else {
+    return `Copyright (C) ${new Date().getFullYear}
+    ${license}.
+    Read more at: ${renderLicenseLink(license)}`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ${renderLicenseBadge(data.license)}
 
   ## Table of Contents
   1. [Description](#Description)
@@ -87,7 +96,7 @@ function generateMarkdown(data) {
   ## Questions
   For further questions, you can reach out to me by:
   email: ${data.email}
-  GitHub: ${data.github}
+  GitHub: github.com/${data.github}
 `;
 }
 

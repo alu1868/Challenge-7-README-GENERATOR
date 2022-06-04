@@ -11,7 +11,7 @@ const questions = [
         name: "title",
         message: "What is the title of your project? (REQUIRED)",
         // checks to see if any input was recieved
-        validate: title => {
+        validate: titleInput => {
             if (titleInput) {
                 return true;
             } else {
@@ -27,7 +27,7 @@ const questions = [
         name: "description",
         message: "Please provide a description for your project (REQUIRED)",
         // checks to see if any input was recieved
-        validate: description => {
+        validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
             } else {
@@ -60,7 +60,7 @@ const questions = [
 
     // choose your license
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Please select the license for your project",
         choices: ["Unlicense", "GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "BootSoftware License 1.0"]
@@ -76,9 +76,9 @@ const questions = [
     // enter email
     {
         type: "input",
-        name: "github",
+        name: "email",
         message: "Please provide your forwarding email (REQUIRED)",
-        validate: email => {
+        validate: emailInput => {
             if (emailInput) {
                 return true
             } else {
@@ -93,7 +93,7 @@ const questions = [
         type: "input",
         name: "github",
         message: "Please provide your GitHub username (REQUIRED)",
-        validate: github => {
+        validate: githubInput => {
             if (githubInput) {
                 return true;
             } else {
@@ -104,21 +104,24 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile("./README.md", generateMarkdown(data), function(err){
-        if (err) {
-            return console.err(err);
-        }
-        console.log("README has been generated")
-    })
-}
+
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
     .then ((data) => {
+        console.log(data)
         writeToFile(data);
+    })
+}
+
+// TODO: Create a function to write README file
+function writeToFile(data) {
+    fs.writeFile("./README.md", generateMarkdown(data), function(err){
+        if (err) {
+            return console.err(err);
+        }
+        console.log("README has been generated")
     })
 }
 
